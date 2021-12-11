@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box; /* это правило позволяет правильно высчитывать ширину и высоту элементов на сайте */
+}
+body {
+    font-family: 'Roboto', sans-serif; /* подключили семейство шрифта на сайт */
+}
+.header {
+    background-color: #635854; /* задали фоновый цвет для шапки */
+    padding-top: 12px; /* выделили 12px сверху для шапки */
+    padding-bottom: 12px; /* выделили 12px снизу для шапки */
+    border-bottom: 4px solid #3596f5; /* сделали голубую полоску внизу шапки */
+}
+.navbar {
+    max-width: 1280px; /* задали максимальную ширину навигационному меню */
+    margin: auto; /* ставим по центру все элементы шапки */
+    display: flex; /* сделали меню гибким */
+    justify-content: space-between; /* расставили элементы меню по краям */
+    align-items: center; /* выравниваем элементы навигации по центру конструкции шапки */
+}
+.navbar-menu {
+    margin: 0; /* отключили внешние отступы */
+    padding: 0; /* отключили внутренние отступы */
+    list-style: none; /* убрали точки у списка меню */
+    display: flex; /* делаем элементы навигации г */
+    text-align: center; /* текст помещается по центру горизонтали окна контейнера */
+}
+.navbar-item {
+    margin-left: 40px; 
+    margin-right: 40px; 
+}
+.navbar-link {
+    text-decoration: none; /* убрали подчёркивание текста */
+    color: #fff; /* сделали белый цвет текста */
+}
+.navbar-contacts {
+    text-align: right; /* выравниваем текст по правому краю */
+}
+.navbar-text {
+    display: block; /* делаем элемент блочным, чтобы он занимал всю строчку */
+    color: #fff;
+    margin-bottom: 4px; /* отталкиваем номер телефона на 4px вниз */
+    font-size: 14px;
+    line-height: 16px; /* изменили высоту строки */
+}
+.navbar-phone {
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none;
+    color: #fff;
+}
