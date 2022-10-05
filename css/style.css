@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'Bebas Neue';
+    src: local('Bebas Neue Regular Regular'), local('BebasNeueRegular'),
+        url('../fonts/BebasNeueRegular.woff2') format('woff2'),
+        url('../fonts/BebasNeueRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 * { /* Задаём значение для всех элементов страницы */
     box-sizing: border-box; /* Позволяет правильно высчитывать высоту и ширину элементов */
 }
@@ -57,4 +67,71 @@ body {
     line-height: 20px; /* Устанавливаем межстрочный интервал текста */
     text-decoration: none; /* Убираем подчёркивание у ссылки в контакте */
     color: white; /* Цвет номера */
+}
+
+.main {
+    max-width: 1280px;
+    margin: auto;
+    padding-top: 54px;
+    display: flex;
+}
+
+.main-info {
+    flex-grow: 1; /* Делаем так, чтобы сжатый блок с информацией забрал всё свободное место родительского блока main */
+    text-align: center; /* Выравниваем всю информацию по центру блока */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-image path {
+    opacity: 0; /* Задаём нулевую прозрачность всем элементам path (всем этажам) */
+    cursor: pointer; 
+}
+
+.home-image path:hover {
+    opacity: 1; /* С помощью псевдо класса hover, наводясь на каждый этаж - он выделяется */
+}
+
+.counter-group {
+    display: flex;
+    flex-direction: column; /* Распологаем элементы в колонку друг по другом */
+    align-items: center; /* Выравниваем их по центру относительно друг друга */
+}
+
+.counter-button {
+    background-color: white;
+    border: none; /* Убрали стандартную обводку кнопки */
+    cursor: pointer;
+}
+
+.counter-arrow-down {
+    transform: rotateX(180deg); /* Развернули стрелку вниз */
+}
+
+.button-primary {
+    background-color: #3596F5;
+    border: none;
+    border-radius: 6px;
+    padding: 16px 36px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.main-title {
+    margin: 0; 
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: normal; /* Убираем жирность шрифта */
+    font-size: 37px;
+    line-height: 44px;
+    color: #635854;
+}
+
+.counter {
+    font-family: "Bebas Neue", sans-serif;
+    color: #635854;
+    font-size: 124px;
+    margin-top: 10px;
 }
