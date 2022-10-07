@@ -3,6 +3,8 @@ $(document).ready(function () {
     let counterUp = $(".counter-up"); // Взаимодействуем со стрелкой вверх
     let counterDown = $(".counter-down"); // кнопка уменьшения этажа
     let floorPath = $(".home-image path");
+    let modal = $(".modal");
+    let modalCloseButton = $(".modal-close-button");
     floorPath.on("mouseover", function () { // Говорим, что при ведении мышкой вверх и вниз по картинке здания, будет подсветчиваться этаж
         floorPath.removeClass('current-floor'); // убираем активный класс у этажей
         currentFloor = $(this).attr("data-floor"); // будет автоматически подсчитываться этаж из index.html путей
@@ -27,5 +29,11 @@ $(document).ready(function () {
             floorPath.removeClass('current-floor');
             $(`[data-floor=${usCurrentFloor}]`).toggleClass("current-floor");
         }
-    })
+    });
+
+    function toggleModal() {
+        modal.toggleClass("is-open");
+    }
+    floorPath.on("click", toggleModal); // открыть окно при выборе этажа
+    modalCloseButton.on("click",toggleModal); // закрыть окно при клике на кнопку закрыть
 }); // Эта функция проверяет готовность нашего сайта к манипуляциям
