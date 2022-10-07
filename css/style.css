@@ -94,6 +94,10 @@ body {
     opacity: 1; /* С помощью псевдо класса hover, наводясь на каждый этаж - он выделяется */
 }
 
+path.current-floor {
+    opacity: 1;
+}
+
 .counter-group {
     display: flex;
     flex-direction: column; /* Распологаем элементы в колонку друг по другом */
